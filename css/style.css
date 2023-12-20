@@ -59,7 +59,10 @@ i{
     margin-right: 10px;
 }
 
-
+.button_change {
+    color: red;
+    cursor: default;
+}
 
 
 

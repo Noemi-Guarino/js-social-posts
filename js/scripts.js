@@ -82,24 +82,55 @@ for (let i = 0; i < posts.length; i++){
         </div>
         <div class="footerpost">
             <div class="">
-                <a id="like" class="buttonlike like" href="">
+                <button id="like" class="buttonlike like" href="">
                     <i class="fa-solid fa-thumbs-up";"></i>
                     <span>Mi Piace</span>
-                </a>
+                </button>
             </div>
             <div class="numberlike">
-                <p>Piace a <b>${posts[i]['likes']}</b> persone</p>
+                <p>Piace a <b id="likescounter">${posts[i]['likes']}</b> persone</p>
             </div>
         </div>
     </div>`
 }
 
-let likes = document.querySelector(".buttonlike");
-let counter = document.querySelector(".numberlike");
+/* <a id="like" class="buttonlike like" href="">
+    <i class="fa-solid fa-thumbs-up";"></i>
+    <span>Mi Piace</span>
+</a> */
 
-likes.addEventListener("click", function(){
+// let counter = document.querySelector(".numberlike");
 
+
+
+let buttonlike = document.querySelectorAll(".buttonlike");
+    for (let i = 0; i < buttonlike.length; i++){
+        buttonlike[i].addEventListener('click', function(){
+            this.classList.toggle('button_change');
+            if (this.classList.contains('button_change')) {
+                posts[i].likes++;
+            }else {
+                posts[i].likes--;
+            }
+
+            document.getElementById('likescounter').innerHTML = posts[i]['likes'];
+    });    
+}
+
+
+
+// function incrementbutton(){
+
+//     for (let i = 0; i < posts.length; i++){
+        
+//         let counter = document.getElementById('likes')
+//         let value = counter[i]['likes'];
+
+//         value++
+
+//         // console.log(value);
+//         // document.getElementById('likes').innerHTML = values
     
 
-})
-
+// }
+// };

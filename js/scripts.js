@@ -82,13 +82,13 @@ for (let i = 0; i < posts.length; i++){
         </div>
         <div class="footerpost">
             <div class="">
-                <button id="like" class="buttonlike like" href="">
+                <button id="like" class="buttonlike like" href="" data-postid="${posts[i]['id']}">
                     <i class="fa-solid fa-thumbs-up";"></i>
                     <span>Mi Piace</span>
                 </button>
             </div>
             <div class="numberlike">
-                <p>Piace a <b id="likescounter">${posts[i]['likes']}</b> persone</p>
+                <p>Piace a <b id="like-counter-${posts[i]['id']}" class="js-likes-counter">${posts[i]['likes']}</b> persone</p>
             </div>
         </div>
     </div>`
@@ -108,12 +108,12 @@ let buttonlike = document.querySelectorAll(".buttonlike");
         buttonlike[i].addEventListener('click', function(){
             this.classList.toggle('button_change');
             if (this.classList.contains('button_change')) {
-                posts[i].likes++;
+                posts[i]['likes']++;
             }else {
-                posts[i].likes--;
+                posts[i]['likes']--;
             }
 
-            document.getElementById('likescounter').innerHTML = posts[i]['likes'];
+            document.getElementById(`like-counter-${posts[i]['id']}`).innerHTML = posts[i]['likes'];
     });    
 }
 

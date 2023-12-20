@@ -6,8 +6,12 @@
 }
 
 .bg_container{
-    background-color: #023047;
+    background-color: #1979a9;
     color: #050505;
+}
+
+.postcontainer{
+    padding: 20px;
 }
 
 .container{
@@ -18,6 +22,7 @@
 
 h1{
     color: white;
+    padding: 20px;
 }
 
 img{
@@ -29,11 +34,12 @@ img{
 }
 
 .post{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 600px;
     padding: 20px;
     background-color: white;
     margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 .postheader{
@@ -49,23 +55,46 @@ img{
     margin-right: 20px;
 }
 
+.content>*{
+    margin-bottom: 20px;
+}
+
 .footerpost{
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
 i{
-    color: black;
+    color: white;
     margin-right: 10px;
+    font-size: 1.2em;
 }
 
 .button_change {
-    color: red;
+    color: blue;
     cursor: default;
 }
 
+.button {
+    background-color: #134d6b;
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+}
 
-
+.button:hover {
+    background-color: #1979a9;
+    color: white;
+}
 
 /* ESEMPIO */
 /* * {

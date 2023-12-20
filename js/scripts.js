@@ -44,7 +44,7 @@ const posts = [
         "media": "https://unsplash.it/600/400?image=24",
         "author": {
             "name": "Luca Formicola",
-            "image": null
+            "image": "https://unsplash.it/600/400?image=24",
         },
         "likes": 56,
         "created": "2021-04-03"
@@ -82,14 +82,24 @@ for (let i = 0; i < posts.length; i++){
         </div>
         <div class="footerpost">
             <div class="">
-                <a href="">
-                    <i class="fa-solid fa-thumbs-up" style="color: #ffffff;"></i>
+                <a id="like" class="buttonlike like" href="">
+                    <i class="fa-solid fa-thumbs-up";"></i>
                     <span>Mi Piace</span>
                 </a>
             </div>
-            <div class="">
+            <div class="numberlike">
                 <p>Piace a <b>${posts[i]['likes']}</b> persone</p>
             </div>
         </div>
     </div>`
 }
+
+let likes = document.querySelector(".buttonlike");
+let counter = document.querySelector(".numberlike");
+
+likes.addEventListener("click", function(){
+
+    
+
+})
+

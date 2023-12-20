@@ -49,16 +49,15 @@ img{
     margin-right: 20px;
 }
 
-.imgcontainerpost{
-    margin-bottom: 20px ;
-    border: 2px solid orange;
-}
-
 .footerpost{
     display: flex;
     justify-content: space-around;
 }
 
+i{
+    color: black;
+    margin-right: 10px;
+}
 
 
 

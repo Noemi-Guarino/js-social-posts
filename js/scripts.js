@@ -94,13 +94,7 @@ for (let i = 0; i < posts.length; i++){
     </div>`
 }
 
-/* <a id="like" class="buttonlike like" href="">
-    <i class="fa-solid fa-thumbs-up";"></i>
-    <span>Mi Piace</span>
-</a> */
-
-// let counter = document.querySelector(".numberlike");
-
+    const preferitepost = []
 
 
 let buttonlike = document.querySelectorAll(".buttonlike");
@@ -109,13 +103,19 @@ let buttonlike = document.querySelectorAll(".buttonlike");
             this.classList.toggle('button_change');
             if (this.classList.contains('button_change')) {
                 posts[i]['likes']++;
+                preferitepost.push(posts[i]['id'])
+                console.log("Il mio post preferito è:" + preferitepost)
+                
             }else {
                 posts[i]['likes']--;
+                preferitepost.pop(posts[i]['id'])
+                console.log("Il mio post preferito è:" + preferitepost)
             }
 
             document.getElementById(`like-counter-${posts[i]['id']}`).innerHTML = posts[i]['likes'];
     });    
 }
+
 
 
 
